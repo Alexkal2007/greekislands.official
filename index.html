@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">Greek Island — Complete Guide to the Greek Islands</title>
+<meta id="pageDescription" name="description" content="Guide to the Greek islands: beaches, activities, budget, and ferry tickets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skipLink">Skip to content</a>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#/" class="brand"><span class="dot">⛵</span> Greek Island</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Μενού" aria-expanded="false">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#/" data-i18n="navHome">Home</a></li>
+      <li><a href="#/" class="region-link" data-region="Κυκλάδες">Κυκλάδες</a></li>
+      <li><a href="#/" class="region-link" data-region="Αργοσαρωνικός">Αργοσαρωνικός</a></li>
+      <li><a href="#/" class="region-link" data-region="Σποράδες">Σποράδες</a></li>
+      <li><a href="#/" class="region-link" data-region="Δωδεκάνησα">Δωδεκάνησα</a></li>
+      <li><a href="#/" class="region-link" data-region="Ιόνιο">Ιόνιο</a></li>
+      <li><a href="#/" class="region-link" data-region="Βόρειο Αιγαίο">Βόρειο Αιγαίο</a></li>
+      <li><a href="#/" class="region-link" data-region="Κρήτη">Κρήτη</a></li>
+      <li><a href="#/" class="cities-link" data-i18n="navCities">All Cities</a></li>
+      <li><a href="#" class="lang-toggle" id="langToggle">ΕΛ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ============ HOME VIEW ============ -->
+  <section class="view is-active" id="view-home">
+    <header class="hero">
+      <h1 data-i18n="heroH1">Find your next dream island</h1>
+      <p class="lead" data-i18n="heroLead">Guides, beaches, budget tips, and ferry routes for all the popular Greek islands — in one place.</p>
+      <div class="search-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Search for an island or region (e.g. Cyclades)...">
+      </div>
+    </header>
+    <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,32 C240,70 480,0 720,20 C960,40 1200,70 1440,30 L1440,70 L0,70 Z"></path></svg>
+
+    <div class="ad-slot"><span data-i18n="adLabel">Ad Space</span></div>
+
+    <section class="section" id="cities">
+      <div class="section-title">
+        <h2 data-i18n="citiesH2">Όλες οι πόλεις</h2>
+        <p data-i18n="citiesP">Επίλεξε μια πόλη για να δεις πλήρη οδηγό: τι να κάνεις, ποια αξιοθέατα να επισκεφτείς και πώς να φτάσεις εκεί.</p>
+      </div>
+      <div class="island-grid" id="cityGrid"></div>
+    </section>
+
+    <section class="section" id="islands">
+      <div class="section-title">
+        <h2 data-i18n="islandsH2">Όλα τα Νησιά</h2>
+        <p data-i18n="islandsP">Επίλεξε ένα νησί για να δεις πλήρη οδηγό: τι να κάνεις, ποιες παραλίες να επισκεφτείς και πώς να φτάσεις εκεί.</p>
+      </div>
+      <div class="island-grid" id="islandGrid"></div>
+      <p class="search-empty" id="searchEmpty" data-i18n="searchEmptyMsg">Δεν βρέθηκε νησί με αυτό το όνομα. Δοκίμασε κάτι άλλο.</p>
+    </section>
+
+    <div class="ad-slot"><span data-i18n="adLabel">Ad Space</span></div>
+  </section>
+
+  <!-- ============ DETAIL VIEW (island or city) — filled by JS ============ -->
+  <section class="view" id="view-detail"></section>
+
+  <!-- ============ STATIC PAGE VIEW (about/contact/terms/cookies/privacy) — filled by JS ============ -->
+  <section class="view" id="view-page"></section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h4>Greek Island</h4>
+      <p style="max-width:280px;color:#93a5b0;" data-i18n="footerTagline">Ο πλήρης οδηγός για να επιλέξεις το επόμενο νησιώτικο ταξίδι σου στην Ελλάδα.</p>
+    </div>
+    <div class="footer-cols">
+      <div>
+        <h4 data-i18n="footerPopular">Δημοφιλή</h4>
+        <ul>
+          <li><a href="#/island/santorini">Santorini</a></li>
+          <li><a href="#/island/mykonos">Mykonos</a></li>
+          <li><a href="#/island/crete">Crete</a></li>
+          <li><a href="#/island/rhodes">Rhodes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footerInfo">Πληροφορίες</h4>
+        <ul>
+          <li><a href="#/">Αρχική</a></li>
+          <li><a href="#/page/about" data-i18n="footerAbout">About Us</a></li>
+          <li><a href="#/page/contact" data-i18n="footerContact">Επικοινωνία</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 data-i18n="footerLegal">Νομικά</h4>
+        <ul>
+          <li><a href="#/page/terms" data-i18n="footerTerms">Terms of Use</a></li>
+          <li><a href="#/page/cookies" data-i18n="footerCookies">Cookies Policy</a></li>
+          <li><a href="#/page/privacy" data-i18n="footerPrivacy">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p class="copyright" data-i18n="footerCopy">© 2026 Greek Island. Οι τιμές των εισιτηρίων είναι ενδεικτικές.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
